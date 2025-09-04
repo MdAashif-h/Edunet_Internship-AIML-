@@ -1,78 +1,102 @@
 # Edunet_Internship-AIML-
 Substainable Agriculture
 
-🌱 LeafLens – AI-Powered Eco-Friendly Crop Disease Detection
+# 🌱 LeafLens – AI-Powered Eco-Friendly Crop Disease Detection
 
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://www.python.org/)  
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange?logo=tensorflow)](https://www.tensorflow.org/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
 
+---
 
+## Sustainable Agriculture
 
+**LeafLens** is an AI-driven solution that detects crop diseases from leaf images and provides **eco-friendly management advice**. It enables farmers, agronomists, and agricultural enthusiasts to monitor crop health efficiently while promoting sustainable practices.
 
+> **Tagline:** LeafLens – See your crops, save your crops. AI-powered insights, eco-friendly action.
 
-LeafLens is an AI-driven solution that detects crop diseases from leaf images and provides eco-friendly management advice. It enables farmers, agronomists, and agricultural enthusiasts to monitor crop health efficiently while promoting sustainable practices.
+---
 
-🔹 Features
+## 🔹 Features
 
-Accurate Disease Detection: Detects 38 crop disease classes with high precision using a fine-tuned CNN model.
+- **Accurate Disease Detection** – Detects 38 crop disease classes with high precision using a fine-tuned CNN model.  
+- **Eco-Friendly Advice** – Provides actionable recommendations without harming the environment.  
+- **Batch & Single Image Prediction** – Supports both bulk uploads and individual image analysis.  
+- **Visual Insights** – Displays disease predictions with images and Grad-CAM-like visualizations for explainability.  
+- **Lightweight Deployment** – Model exported to **TFLite**, ready for mobile and edge devices.  
+- **Exportable Reports** – Saves predictions and advice into CSV files for record-keeping.  
 
-Eco-Friendly Advice: Provides actionable recommendations without harming the environment.
+---
 
-Batch & Single Image Prediction: Supports both bulk uploads and individual image analysis.
+## 🔹 Supported Crops & Diseases
 
-Visual Insights: Displays disease predictions with images and Grad-CAM-like visualizations for explainability.
+- **Apple**: Apple Scab, Black Rot, Healthy  
+- **Tomato**: Late Blight, Early Blight, Healthy  
+- *(Full list of 38 classes included in the model)*  
 
-Lightweight Deployment: Model exported to TFLite, ready for mobile and edge devices.
+---
 
-Exportable Reports: Saves predictions and advice into CSV files for record-keeping.
+## 🔹 Eco-Friendly Advice Examples
 
-🔹 Supported Crops & Diseases
+| Disease Class | Advice |
+|---------------|--------|
+| Apple___Apple_scab | Remove infected leaves. Apply sulfur-based fungicide. |
+| Apple___Black_rot | Prune affected areas and maintain proper sanitation. |
+| Apple___healthy | No action needed. Monitor regularly. |
+| Tomato___Late_blight | Use copper-based sprays. Avoid overhead watering. |
+| Tomato___Early_blight | Rotate crops and remove infected debris. |
 
-Apple: Apple Scab, Black Rot, Healthy
+---
 
-Tomato: Late Blight, Early Blight, Healthy
+## 🔹 Demo Screenshot
 
-(Full list of 38 classes included in the model)
+![LeafLens Demo](demo_screenshot.png)  
+*Visual prediction with confidence and eco-friendly advice.*
 
-🔹 Demo Screenshots
+---
 
+## 🔹 Installation
 
-Visual prediction with confidence and eco-friendly advice.
-
-🔹 Installation
-
-Clone the repository:
-
+1. Clone the repository:  
 git clone https://github.com/YourUsername/LeafLens.git
 cd LeafLens
 
 
-Install dependencies:
-
+2. Install dependencies:  
 pip install -r requirements.txt
 
+csharp
 
-Mount Google Drive if using Colab for dataset/models:
-
+3. Mount Google Drive if using Colab for dataset/models:  
+```python
 from google.colab import drive
 drive.mount('/content/drive')
 
 🔹 Usage
 Single Image Prediction
+
+python
+
 from predict import predict_and_visualize
 
 img_path = 'path_to_leaf_image.jpg'
 pred_class, confidence, advice = predict_and_visualize(img_path)
-
 Batch Prediction
+
+python
+
 from predict import predict_batch_images
 
 batch_results = predict_batch_images(folder_path='batch_images/')
-
 Export TFLite Model
+
+python
+
 from export_model import export_tflite_model
 
 export_tflite_model(model_path='models/fine_tuned_model.h5')
-
 🔹 Project Structure
+
 LeafLens/
 │
 ├─ models/
@@ -85,9 +109,7 @@ LeafLens/
 ├─ requirements.txt
 ├─ README.md
 └─ demo_screenshot.png
-
 🔹 Technologies Used
-
 Python 3.12
 
 TensorFlow 2.x / Keras – CNN-based fine-tuned model
@@ -101,20 +123,17 @@ Google Colab / Drive – Dataset and model storage
 TFLite – Lightweight deployment for mobile/edge
 
 🔹 Contribution
-
 Contributions are welcome!
 
 Fork the repository
 
-Create a feature branch
+Create a feature branch (git checkout -b feature-name)
 
-Submit a pull request
+Commit your changes (git commit -m 'Add feature')
+
+Push to the branch (git push origin feature-name)
+
+Open a Pull Request
 
 🔹 License
-
-This project is licensed under MIT License. See LICENSE
- for details.
-
-🔹 Tagline
-
-LeafLens – See your crops, save your crops. AI-powered insights, eco-friendly action.
+This project is licensed under the MIT License – see LICENSE for details.
